@@ -1,5 +1,6 @@
-#include <chrono>
 #pragma once
+
+#include <chrono>
 
 #include "canonical.h"
 #include "stats.h"
@@ -19,6 +20,7 @@ public:
     SolveResult solve();
     SolveResult solveFromState(const State& root);
     MemoTable& memo() { return memo_; }
+    const MemoTable& memo() const { return memo_; }
 private:
     bool canFirstWin(const State& state, int depth);
     bool shouldStop() const;

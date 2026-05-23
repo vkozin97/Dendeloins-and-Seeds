@@ -13,6 +13,7 @@ add_library(dandelions_core
     src/solver.cpp
     src/memo_table.cpp
     src/memo_file.cpp
+    src/oracle.cpp
 )
 
 target_include_directories(dandelions_core PUBLIC src)
