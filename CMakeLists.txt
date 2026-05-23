@@ -11,6 +11,8 @@ add_library(dandelions_core
     src/canonical.cpp
     src/stats.cpp
     src/solver.cpp
+    src/memo_table.cpp
+    src/memo_file.cpp
 )
 
 target_include_directories(dandelions_core PUBLIC src)
@@ -27,3 +29,6 @@ target_link_libraries(dandelions_tests PRIVATE dandelions_core)
 
 enable_testing()
 add_test(NAME dandelions_tests COMMAND dandelions_tests)
+
+add_executable(dandelions_play src/play_main.cpp)
+target_link_libraries(dandelions_play PRIVATE dandelions_core)
