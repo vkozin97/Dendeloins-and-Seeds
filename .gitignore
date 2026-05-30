@@ -2,3 +2,8 @@ build/
 *.o
 *.a
 /results
+
+*.dsmem
+cache/
+memo/
+results/*.dsmem
